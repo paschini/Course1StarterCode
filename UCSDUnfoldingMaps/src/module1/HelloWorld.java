@@ -4,9 +4,11 @@ import processing.core.PApplet;
 import de.fhpotsdam.unfolding.UnfoldingMap;
 import de.fhpotsdam.unfolding.geo.Location;
 import de.fhpotsdam.unfolding.providers.AbstractMapProvider;
-import de.fhpotsdam.unfolding.providers.Google;
-import de.fhpotsdam.unfolding.providers.MBTilesMapProvider;
+// import de.fhpotsdam.unfolding.providers.Google;
+import de.fhpotsdam.unfolding.providers.Microsoft;
 import de.fhpotsdam.unfolding.utils.MapUtils;
+import de.fhpotsdam.unfolding.providers.MBTilesMapProvider;
+
 
 /** HelloWorld
   * An application with two maps side-by-side zoomed in on different locations.
@@ -36,10 +38,10 @@ public class HelloWorld extends PApplet
 	UnfoldingMap mapStockholm;
 
 	public void setup() {
-		size(950, 600, P2D);
+		size(850, 600, P2D);
 		this.background(33, 33, 33);
 
-		AbstractMapProvider provider = new Google.GoogleTerrainProvider();
+		AbstractMapProvider provider = new Microsoft.HybridProvider();
 
 		int zoomLevel = 10;
 		
